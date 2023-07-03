@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+    <meta charset="UTF-8">
+    <title>Aktualizuj</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h2>Aktualizuj informacje o książce</h2>
+    <form action="/zapisz" method="post">
+        <input type="hidden" th:field="*{books.id}">
+        <div class="form-group">
+            <label for="isbn">ISBN:</label>
+            <input type="text" class="form-control" id="isbn" th:field="*{books.ISBN}">
+        </div>
+        <div class="form-group">
+            <label for="title">Tytuł:</label>
+            <input type="text" class="form-control" id="title" th:field="*{books.title}">
+        </div>
+        <div class="form-group">
+            <label for="author">Autor:</label>
+            <input type="text" class="form-control" id="author" th:field="*{books.author}">
+        </div>
+        <div class="form-group">
+            <label for="publisher">Wydawca:</label>
+            <input type="text" class="form-control" id="publisher" th:field="*{books.publisher}">
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie książki do biblioteki</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<form action="/dodaj" method="post">
+    <table>
+        <tr>
+            <td>Podaj ISBN</td>
+            <td><input type="number" name="isbn" required></td>
+        </tr>
+        <tr>
+            <td>Podaj tytuł</td>
+            <td><input type="text" name="title" required></td>
+        </tr>
+        <tr>
+            <td>Podaj autora</td>
+            <td><input type="text" name="author" required></td>
+        </tr>
+        <tr>
+            <td>Podaj wydawcę</td>
+            <td><input type="text" name="publisher" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Dodaj książkę">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <a href="/" class="btn btn-primary">Wroc</a>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
